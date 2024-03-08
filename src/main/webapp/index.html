@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+    <style>
+    		
+*{
+    font-size: large;
+}
+form+h1{
+    font-size: larger;
+    color: white;
+}
+body{
+    background-image: url(background1.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    
+    
+}
+
+form{
+    background-color: rgba(0,0,0, 0.6);
+    color:white;
+    width: 500px;
+    border-radius: 14px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0px 0px 50px 0px black;
+    
+}
+input[type=date],input[type=text],input[type=number],input[type=email]{
+    margin: 8px,0;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+input[type=text]:focus,input[type=number]:focus,input[type=email]:focus{
+    background-color: rgb(19, 118, 163);
+}
+textarea{
+    margin: 8px,0;
+    padding: 0 10px;
+    border-radius: 12px;
+}
+fieldset{
+    border-radius: 10px;
+}button{
+    border-radius: 5px;
+    padding: 5px;
+}
+    </style>
+</head>
+<body>
+    
+    <form action="register" method="get" >
+        <h1 style="text-align:center">Student details</h1>
+        <fieldset>
+            <legend>Personal</legend>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="Name" required><br>
+            <label for="fname">Father name:</label><br>
+            <input type="text" id="fname" name="fName" required><br>
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="DOB" required><br>
+            <label for="addr">Address:</label><br>
+            <textarea name="Addr" id="addr" cols="30" rows="10" placeholder="Enter Address Here" none></textarea><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="Email" id="email" placeholder="abc@gmail.com">
+
+        </fieldset>
+        <fieldset>
+            <legend>Education</legend>
+            <fieldset>
+                <legend>SSC</legend>
+                <label for="sname">School Name:</label><br>
+                <input type="text" id="sname" name="SName" placeholder="enter your school name"><br>
+                <label for="marks">School marks:</label><br>
+                <input type="number" name="SnameM" id="marks" min="35" max="100" required><br>
+            </fieldset>
+            <label for="degree">Chosse from Intermediate and Diploma</label><br>
+            <input type="radio" name="Degree" id="degree" value="Intermediate">
+            <label for="degree">Intermediate</label><br>
+            <input type="radio" name="Degree" id="degree" value="Diploma">
+            <label for="degree">Diploma</label><br>
+            <label for="perce">Percentage:</label>
+            <input type="number" name="Percentage" id="perce" min="35" max="100"><br>
+            <label for="branch">Select Your B.Tech Branch</label>
+            <select name="branches" id="branch" required>
+                <option value="CSE" selected>CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="AIML">AIML</option>
+                <option value="AIDS">AIDS</option>
+                <option value="IT">IT</option>
+                <option value="CSBS">CSBS</option>
+                <option value="CE">CE</option>
+                <option value="ME" >ME</option>
+            </select>
+        </fieldset>
+        <button>Save</button>
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>
+
